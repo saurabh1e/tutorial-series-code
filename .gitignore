@@ -1,15 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
-.idea/inspectionProfiles/
-.idea/misc.xml
-.idea/modules.xml
-.idea/tutorial-series.iml
-.idea/workspace.xml
+
 __pycache__/
 venv/
 *.db
-.idea/dataSources.local.xml
-.idea/dataSources.xml
-.idea/dataSources/
-.idea/markdown-navigator.xml
-.idea/markdown-navigator/
-test.db
+.idea/

@@ -2,10 +2,10 @@ import os
 import re
 
 from flask import Flask, request, make_response, jsonify
-from flask_sqlalchemy import SQLAlchemy, models_committed
+from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.ext.declarative import declared_attr
-from sqlalchemy import func, select, UniqueConstraint, Index
+from sqlalchemy import func, select, UniqueConstraint
 from flask_marshmallow import Marshmallow
 from marshmallow import fields
 from marshmallow_sqlalchemy import ModelSchema
@@ -62,7 +62,6 @@ class User(db.Model, BaseMixin, ReprMixin):
                                lazy='dynamic')
     ratings = db.relationship('UserRating', back_populates='rater', uselist=True,
                               lazy='dynamic')
-
 
     @hybrid_property
     def name(self):
